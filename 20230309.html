@@ -1,0 +1,52 @@
+
+<style>
+ #result1{
+ 	background-color: red;
+    width: 100px;
+ 	height: 100px;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 20px;
+ }	
+ #result2{
+ 	background-color: blue;
+ 	width: 100px;
+ 	height: 100px;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 20px;
+ }	
+</style>
+
+<div id='result1'>
+</div>
+
+<div id='result2'>
+</div>
+
+<div>
+	<label for="x">新垣結衣</label>
+	<input type="number" name="x" id="x">
+	<br>
+	<label for="y">NewJeans</label>
+	<input type="number" name="y" id="y">
+	<br>
+	<button id="btn" onclick="show()">顯示最後投票結果</button>
+</div>
+ 
+<script>
+let message = " hello ";
+
+let x = "新垣結依";
+let y = "NewJeans";
+let z = x < y;
+document.querySelector("#result1").innerText = x;
+document.querySelector("#result2").innerText = y;
+
+function show() {
+    let result_x = document.querySelector("#x").value;
+    let result_y = document.querySelector("#y").value;
+    document.querySelector("#result1").style.width = result_x + "px";
+	document.querySelector("#result2").style.width = result_y + "px";
+}
+</script>
