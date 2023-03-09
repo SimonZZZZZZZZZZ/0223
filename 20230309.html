@@ -15,7 +15,18 @@
  	color: white;
  	font-weight: bold;
  	font-size: 20px;
- }	
+ }
+
+ button {
+ 	width: 300px;
+ 	height: 300px;
+ 	font-size: 30px;
+ }
+ 
+ #cancel {
+ 	background-color: rgba(0,255,0,0.5);
+ 	color: white;
+ }		
 </style>
 
 <div id='result1'>
@@ -32,13 +43,14 @@
 	<input type="number" name="y" id="y">
 	<br>
 	<button id="btn" onclick="show()">顯示最後投票結果</button>
+	<button id="cancel" onclick="cancel()">回復原始狀態</button>
 </div>
  
 <script>
 let message = " hello ";
 
-let x = "全汝彬<img src='https://images.chinatimes.com/newsphoto/2021-02-24/656/20210224003471.jpg' width='70' height='70'>";
-let y = "朴恩斌<img src='https://s.yimg.com/ny/api/res/1.2/83jrvMlGnQSZVjH2_PQvgg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTk2MA--/https://media.zenfs.com/no/am730_578/088231f159100954703ec883dc480913' width='70' height='70'>";
+let x = "全汝彬<img src='https://images.chinatimes.com/newsphoto/2021-02-24/656/20210224003471.jpg' width='90' height='70'>";
+let y = "朴恩斌<img src='https://s.yimg.com/ny/api/res/1.2/83jrvMlGnQSZVjH2_PQvgg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTk2MA--/https://media.zenfs.com/no/am730_578/088231f159100954703ec883dc480913' width='90' height='70'>";
 let z = x < y;
 document.querySelector("#result1").innerHTML = x;
 document.querySelector("#result2").innerHTML = y;
@@ -49,4 +61,11 @@ function show() {
     document.querySelector("#result1").style.width = result_x + "px";
 	document.querySelector("#result2").style.width = result_y + "px";
 }
+
+function cancel() {
+	document.querySelector("#result1").style.width = "100px";
+	document.querySelector("#result2").style.width = "100px";
+
+}
+
 </script>
