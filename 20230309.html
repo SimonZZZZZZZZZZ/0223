@@ -25,10 +25,10 @@
 </div>
 
 <div>
-	<label for="x">新垣結衣</label>
+	<label for="x">全汝彬</label>
 	<input type="number" name="x" id="x">
 	<br>
-	<label for="y">NewJeans</label>
+	<label for="y">朴恩斌</label>
 	<input type="number" name="y" id="y">
 	<br>
 	<button id="btn" onclick="show()">顯示最後投票結果</button>
@@ -37,11 +37,11 @@
 <script>
 let message = " hello ";
 
-let x = "新垣結依";
-let y = "NewJeans";
+let x = "全汝彬<img src='https://images.chinatimes.com/newsphoto/2021-02-24/656/20210224003471.jpg' width='50' height='50'>";
+let y = "朴恩斌<img src='https://s.yimg.com/ny/api/res/1.2/83jrvMlGnQSZVjH2_PQvgg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTk2MA--/https://media.zenfs.com/no/am730_578/088231f159100954703ec883dc480913' width='50' height='50'>";
 let z = x < y;
-document.querySelector("#result1").innerText = x;
-document.querySelector("#result2").innerText = y;
+document.querySelector("#result1").innerHTML = x;
+document.querySelector("#result2").innerHTML = y;
 
 function show() {
     let result_x = document.querySelector("#x").value;
