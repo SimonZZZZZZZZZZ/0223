@@ -1,0 +1,163 @@
+<html>
+<head>
+	<title>顯示與隱藏</title>
+	
+	<style>
+		.korea img{
+			width: auto;
+			height: 100px;
+		}
+
+		.japan img {
+			width: auto;
+			height: 100px;
+		}
+
+		.taiwan img {
+			width: auto;
+			height: 100px;
+		}
+
+		.korea, .japan, .taiwan {
+			display: none;
+		}
+
+
+	</style>
+</head>
+
+<body>
+
+	<button onclick="hide();">隱藏文字</button>
+	<button onclick="show();">顯示文字</button>
+
+	<div class="news_title">
+		<h1>NewJeans</h1>
+		<p>NewJeans是由韓國娛樂公司HYBE的子公司ADOR於2022年7月22日推出的女子音樂組合，由三位韓國籍成員Minji、Haerin、Hyein，一位越澳雙籍成員Hanni，以及一位韓澳雙籍成員Danielle所組成。123 2022年8月1日發行首張迷你專輯《New Jeans》正式出道。
+			<button onclick="hideNewJeans();">隱藏NewJeans</button>
+			<button onclick="showNewJeans();">顯示NewJeans</button>
+			<div class="bands">
+				<div class="newjeans korea">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/NewJeans_theMEGASTUDY.jpg" width="200" height="200">
+				</div>
+
+				<button class="newjeans korea">
+					<img src="https://cdn2.ettoday.net/images/6914/d6914962.jpg" width="100" height="100">
+				</button>
+			</div>
+		</p>
+	</div>
+
+	<div class="news_title">
+		<h1>Seventeen</h1>
+		<p>Seventeen是一個由13名成員組成的韓國男子流行音樂團體，由Pledis娛樂於2015年5月26日推出1。團體有Hiphop Team、Vocal Team、Performance Team三個分隊。1 成員包括韓國籍的S.COUPS、淨漢、Hoshi、圓佑、WOOZI、DK、珉奎、勝寛、Dino，以及中國籍的THE8、Jun、韓籍美國人的Joshua和韓籍越南人的Vernon。1
+			<button onclick="hideSeventeen();">隱藏Seventeen</button>
+			<button onclick="showSeventeen();">顯示Seventeen</button>
+			<div class="bands">
+
+				<div class="seventeen korea">
+					<img src="https://pic.pimg.tw/hanzhiyu/1605355002-2707264918-g.png" width="100" height="100">
+				</div>
+			</p>
+		</div>
+	</div>
+
+	<div class="news_title">
+		<h1>5566</h1>
+		<p>5566是一個由5名成員組成的台灣男子團體，於2002年1月21日出道。5566名稱原意為「5位團員，6大領域」期許團內五位成員於演藝界的六大領域（唱片、主持、戲劇、電影、廣告、舞台）皆有收穫與發展，現任團員為孫協志、王仁甫、許孟哲。1
+			<button onclick="hideFivefivesixsix();">隱藏5566</button>
+			<button onclick="showFivefivesixsix();">顯示5566</button>
+			<div class="bands">
+
+
+				<div class="fivefivesixsix taiwan">
+					<img src="https://images.chinatimes.com/newsphoto/2020-11-20/656/20201120005168.jpg">
+				</div>
+			</div>
+		</p>
+	</div>
+
+
+
+
+
+
+<div class="bands">
+	<div class="yoasobi japan">
+		<img src="https://cdn.hk01.com/di/media/images/dw/20220330/585898691999567872274983.jpeg/Q50xXOaC66iSlwL90djTZxDWvxd1vvMOUeA4aFHgOGg?v=w1920">
+	</div>
+
+	<div class="yellowgreensociety japan">
+		<img src="https://www.likejapan.com/wp-content/uploads/2020/05/%E6%8A%93%E7%B7%8A%E5%BF%83%E9%9D%88%E7%9A%84%E9%9F%B3%E6%A8%82-%E6%97%A5%E6%9C%AC%E6%A8%82%E5%A3%87%E5%82%99%E5%8F%97%E6%B3%A8%E7%9B%AE%E2%80%94%E2%80%94%E7%B6%A0%E9%BB%83%E8%89%B2%E7%A4%BE%E6%9C%83-%E5%85%A8%E6%96%87%E4%BB%8B%E7%B4%B9.jpg">
+	</div>
+</div>
+
+<div class="bands">
+
+
+
+	<div class="nineoneone taiwan">
+		<img src="https://attach.setn.com/newsimages/2017/01/05/768598-PH.jpg">
+	</div>
+</div>
+<script type="text/javascript">
+	function hide() {
+		document.querySelector(".news_title").style.display="none";
+	}
+
+	function show() {
+		document.querySelector(".news_title").style.display="inline-block";
+	}
+
+	function hideNewJeans() {
+
+		let elements = document.querySelectorAll(".newjeans");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
+	}
+
+	function showNewJeans() {
+		let elements = document.querySelectorAll(".newjeans");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="url(https://upload.wikimedia.org/wikipedia/commons/c/cc/NewJeans_theMEGASTUDY.jpg)";
+	}
+
+	function hideSeventeen() {
+
+		let elements = document.querySelectorAll(".seventeen");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
+	}
+
+	function showSeventeen() {
+		let elements = document.querySelectorAll(".seventeen");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="url(https://images.chinatimes.com/newsphoto/2021-11-14/656/20211114000957.jpg)";
+	}
+
+
+		function hideFivefivesixsix() {
+
+		let elements = document.querySelectorAll(".fivefivesixsix");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
+	}
+
+	function showFivefivesixsix() {
+		let elements = document.querySelectorAll(".fivefivesixsix");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="url(https://www.mirrormedia.com.tw/assets/images/20181107153913-9c74bae632e22a175a74af373dbc9b62-mobile.jpg)";
+	}
+</script>
+</body>
+
+</html>
