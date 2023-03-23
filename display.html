@@ -5,12 +5,45 @@
 
 	<body>
 
+		<button onclick="hide();">隱藏文字
+        </button>
+        <button onclick="show();">顯示文字</button>
+		<button onclick="hideNientingWu();">隱藏NientingWu</button>
+		<button onclick="showNientingWu();">顯示NientingWu
+</button>
 		<div class="news_title">
 			第六週上課
 			<br />
 			要準備期中報告了
 		</div>
+		<div class="NientingWu">
+			<img src="https://d9xe416pf8kwg.cloudfront.net/media/gimages/2018/07/%E6%93%B7%E5%8F%96_2022_04_05_21_53_42_593.png" width="200" height="200">
+		</div>
 
+		<button>
+			<img src="https://imgcdn.cna.com.tw/www/WebPhotos/800/20210404/1200x871_552124171033.jpg" width="200" height="200">
+		</button>
+
+    <script type="text/javascript">
+    	function hide(){
+    		document.querySelector(".news_title").style.display="none";
+    	}
+
+    	function show() {
+			document.querySelector(".news_title").style.display="block";
+		}
+		function hideNientingWu() {
+			let elements = document.querySelectorAll(".NientingWu")for(let i = 0; i < elements.length; i=i+1) {
+				elements[i].style.display = "none";
+		}
+
+		function showNientingWu() {
+			let elements = document.querySelectorAll(".NientingWu");
+			for(let i = 0; i < elements.length; i=i+1) {
+				elements[i].style.display = "block";
+			}
+		}
+	</script>
 	</body>
 		
 </html>
