@@ -9,7 +9,7 @@
 <div class="main"></div>
 <script>
 d3.csv("20230413.csv", function(data){
-
+    document.querySelector(".main").innerHTML = data;
 });
 </script>
 
